@@ -1,0 +1,42 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+desktop.ini
+
+# Build artifacts
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.obj
+*.o
+*.exe
+*.dll
+*.so
+*.pyc
+*.class
+target/
+build/
+dist/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# Dependency management
+node_modules/
+vendor/
+venv/
+env/
+
+# Sensitive information
+*.env
+.env.local
+config.local.php
