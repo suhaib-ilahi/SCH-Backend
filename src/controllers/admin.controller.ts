@@ -32,7 +32,7 @@ const loginAdmin = asyncHandler(async (req: Request, res: Response) => {
     .cookie("token", token, {
       httpOnly: true,
       // Ports 3000 and 5174 are same-site on localhost, so lax works
-      sameSite: "lax",
+      sameSite: "none",
       secure: false,
       maxAge: 60 * 60 * 1000, // 1 hour
     })
@@ -44,8 +44,8 @@ const logoutAdmin = asyncHandler(async (req: Request, res: Response) => {
   res
     .clearCookie("token", {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
     })
     .status(200)
     .json(new ApiResponse(200, null, "Logged out successfully"));

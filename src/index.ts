@@ -14,6 +14,8 @@ app.use(
       const allowedOrigins = [
         process.env.CORS_ORIGIN,
         "http://localhost:5173",
+        "https://sch-8fbprpnjz-suhaibelahi87-gmailcoms-projects.vercel.app",
+        "https://sch-ebon.vercel.app",
         "http://localhost:5174",
       ].filter(Boolean) as string[];
 
