@@ -31,7 +31,6 @@ const loginAdmin = asyncHandler(async (req: Request, res: Response) => {
   res
     .cookie("token", token, {
       httpOnly: true,
-      // Ports 3000 and 5174 are same-site on localhost, so lax works
       sameSite: "none",
       secure: true,
       maxAge: 60 * 60 * 1000, // 1 hour
