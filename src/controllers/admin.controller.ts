@@ -33,7 +33,7 @@ const loginAdmin = asyncHandler(async (req: Request, res: Response) => {
       httpOnly: true,
       // Ports 3000 and 5174 are same-site on localhost, so lax works
       sameSite: "none",
-      secure: false,
+      secure: true,
       maxAge: 60 * 60 * 1000, // 1 hour
     })
     .status(200)
